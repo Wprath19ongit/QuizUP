@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <!-- <link rel="stylesheet" href="sign_in.css"> -->
+</head>
+<body>
+    {%extends 'base.html'%}
+
+    {% block content %}
+
+    <h2 id="sign"> Sign-up</h2>
+    
+    <form method="POST">    
+    
+        {% csrf_token %}
+
+<!-- {{form}} -->
+
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        
+        <label for="lname">Email-id:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="fname">Username:</label>
+        <input type="text" id="uname" name="uname"><br><br>
+        
+        <label for="lname">Password:</label>
+        <input type="password" id="pass1" name="pword1"><br><br>
+        
+        <label for="lname"> confirm Password:</label>
+        <input type="password" id="pass2" name="pword2"><br><br>
+        
+        <label for="confirm">confirm </label>
+        <input type="checkbox" name="Confirm"><br><br>
+        
+        <button type="submit" name = "signup" formaction="sign_in">Sign-up</button>  
+        <!-- formaction to be specified -->
+    
+    </form>
+    {%endblock%}
+    
+</body>
+</html>

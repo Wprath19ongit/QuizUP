@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizUP</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+</head>
+<body>
+    {%extends "base.html"%}
+    
+    {% block content %}
+    <h1 style="text-align:center">Welcome to Quiz-UP</h1>
+
+    <form method="get">
+
+        {% csrf_token %}
+        
+        <button type="submit" formaction="about" style="text-align:center">About</button>
+        <button type="submit" formaction="signin" style="text-align:center">signin</button>
+        <button type="submit" formaction="signup" style="text-align:center">signup</button>
+
+
+    </form>
+    {%endblock%}
+
+</body>
+</html>

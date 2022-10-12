@@ -1,0 +1,24 @@
+quiz (default) -> django-admin startproject quiz    // first_step
+QUIZ_APP -> python manage.py startapp QUIZ_APP      // second_step
+
+quiz-> asgi.py  // for deployment
+    -> wsgi.py  // for deployment
+    -> urls.py  // 
+    -> settings.py
+
+QUIZ_APP-> admin.py             //
+        -> apps.py              //
+        -> models.py            //
+        -> tests.py             //
+        -> views.py	            // for endpoints (eg->  /wani or /about)
+        -> migrations folder    // to apply any changes made to the models
+        -> urls.py              //
+
+*) python manage.py migrate         //  The migrate command looks at the INSTALLED_APPS setting and creates any 
+                                        necessary database tables according to the database settings in 
+                                        quiz/settings.py file and the database migrations shipped with the app
+
+SELECT TABLE_NAME FROM USER_TABLES  // command to see tables created by Django
+
+python manage.py makemigrations
+python manage.py migrate
